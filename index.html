@@ -18,12 +18,49 @@ html, body {
   overflow-x:hidden;
   background: white;
   font-size:100%;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;
 }
 
 body {
   height:100%;
   overflow:hidden;
+}
+
+
+article::-webkit-scrollbar {
+    height: 2px;
+}
+ 
+article::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+article::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid black;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid black;
+}
+
+
+
+
+
+::selection {
+    color: white; 
+    background: #0101FE;
 }
 
 .wrapper {
@@ -32,21 +69,117 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/*.menu {
-  position:fixed;
-  left:0;
-  top:20px;
-  width:100%;
-  height:30px;
-  background:transparent;
-  z-index:100;
-}*/
+.underline {
+  border-bottom: 1px solid black;
+}
 
+.underlinew {
+  border-bottom: 1px solid white;
+}
+
+.cadre {
+  border: 1px solid black;
+  padding:10px;
+  font-style: italic;
+  font-family:"berkeley";
+  width:350px;
+  margin-left:60px;
+}
+
+.cadrew {
+  border: 1px solid white;
+  padding:10px;
+  font-style: italic;
+  font-family:"berkeley";
+  width:350px;
+  margin-left:60px;
+}
+
+.encadre {
+  border: 1px solid black;
+  padding:2px;
+  }
+
+.lydianmot{
+  font-family: "lydian";
+  text-transform: uppercase;
+  font-size:25px;
+  padding-left: 200px;
+}
+
+.citation {
+  font-style: italic;
+  padding-left:100px;
+  
+}
+
+.petit{
+  font-family:"berkeley";
+  font-size:14px;
+}
+
+
+
+
+
+.rotate {
+  font-style: italic;
+  font-family:"berkeley";
+  padding:15px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-top: 50px;
+  width:220px;
+  height:140px;
+  border: 1px solid white;
+  margin-left:30px;
+}
+
+.rotate1 {
+  font-style: italic;
+  font-family:"berkeley";
+  padding:15px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-top: 50px;
+  width:220px;
+  height:120px;
+  border: 1px solid white;
+  margin-left:30px;
+}
+
+.nonrotate1 {
+  font-style: italic;
+  font-family:"berkeley";
+  padding:15px;
+  margin-top: 10px;
+  width:280px;
+  height:180px;
+  border: 1px solid white;
+  margin-left:0px;
+}
+
+.nonrotate2 {
+  font-style: italic;
+  font-family:"berkeley";
+  padding:15px;
+  margin-top: 10px;
+  width:280px;
+  height:120px;
+  border: 1px solid white;
+  margin-left:0px;
+}
 
 
 .summary {
-  font-family : "worcestersf", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family : "berkeley", Helvetica, Arial, sans-serif;
+  font-size: 22px;
   line-height: 23px;
   text-transform: uppercase;
   margin-top: 3%;
@@ -54,12 +187,11 @@ body {
   position:fixed;
   background:transparent;
   z-index:100;
-  /*background-color: blue;*/
-  
 }
 
 span.dropt {
   border-bottom: 1px solid black;
+  text-shadow: 0.1em 0.1em 0.2em white;
 }/*etat de summary avant clique*/
 
 span.dropt:hover {
@@ -67,15 +199,7 @@ span.dropt:hover {
   z-index: 6;
    }
 
-/*span.dropt span {
-  position: absolute;
-  margin: 20px 20 0 0px;
-  padding: 3px 3px 3px 3px;
-  border-style:solid;
-  border-color:black;
-  border-width:1px;
-  z-index: 6;
-}*/
+
 
 span.dropt:hover span {
   left: -195%;
@@ -89,53 +213,31 @@ span.dropt span {
   border-style:solid;
   border-color:black;
   border-width:1px;
+  text-shadow: none;
 }
 
 span.dropt:hover span {
-  font-family : "worcestersf", Helvetica, Arial, sans-serif;
+  font-family : "berkeleybold", Helvetica, Arial, sans-serif;
+  font-size:19px;
   margin: 0px 0px 0px 0px;
   background: black;
   color:white;
   font-weight: normal;
-  line-height:27px;
   text-transform: none;
-  z-index:6;} 
+  z-index:6;
+  text-shadow: none;
+  } 
 
 span.sum {
   text-align:center;
   color: white;
   z-index:6;
+  text-shadow: none;
 
 }
 
 
 
-/*.menu ul li {
-  display:inline;
-  color:black;
-}
-
-.menu ul li a {
-  font-family: 'Ubuntu', verdana, arial, sans-serif;
-  font-weight: 400;
-  text-decoration:none;
-  color:black;
-  line-height:30px;
-  text-align: center;
-}
-.menu ul li a {
-  font-family: 'Ubuntu', verdana, arial, sans-serif;
-  font-weight: 400;
-  text-decoration:none;
-  color:#fff;
-  line-height:30px;
-  margin:0 20px;
-  font-size:120%;
-}
-
-.menu ul li a:hover {
-  text-decoration:underline;
-}*/
 
 .curtain {
   position:fixed;
@@ -178,26 +280,30 @@ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
  
 
 @font-face{
-    font-family : "worcestersf";
-    src : url('worcestersf.ttf');
+    font-family : "berkeley";
+    src : url('BerkeleyMedium.otf');
 }
 
-p {
-  font-family : "worcestersf", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color:black;
-  font-size: 18px;
-  line-height: 23px;
+@font-face{
+    font-family : "berkeleybold";
+    src : url('BerkeleyBold.otf');
 }
+
+@font-face{
+    font-family : "lydian";
+    src : url('LydianBold.ttf');
+}
+
+
 
 .inner a:link {
-  font-family: "worcestersf", helvetica, arial, sans-serif;
+  font-family: "berkeleybold", helvetica, arial, sans-serif;
   text-decoration:none;
   
 }
 
 .inner a:visited {
-  font-family: "worcestersf", helvetica, arial, sans-serif;
+  font-family: "berkeleybold", helvetica, arial, sans-serif;
   text-decoration:none;
   color:white;
   
@@ -216,15 +322,17 @@ p {
 }
 
 .summary a:link {
-  font-family: "worcestersf", helvetica, arial, sans-serif;
+  font-family: "berkeleybold", helvetica, arial, sans-serif;
   text-decoration:none;
+  
   
 }
 
 .summary a:visited {
-  font-family: "worcestersf", helvetica, arial, sans-serif;
+  font-family: "berkeleybold", helvetica, arial, sans-serif;
   text-decoration:none;
   color:white;
+
   
 }
 
@@ -242,26 +350,69 @@ p {
 
 
 
-h1, h2, h3 {
+
+
+p {
+  font-family : "berkeley", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color:black;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+h4 {
+  font-family : "berkeleybold", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color:white;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+h5 {
+  font-family : "berkeleybold", Helvetica, Arial, sans-serif;
+  color:white;
+  font-size: 16px;
+  text-align: left;
+  font-weight: normal;
+}
+
+
+
+
+h1 {   /*TITLES black on white*/
+  font-family: "lydian", times;
   margin:40px auto;
   padding:0;
   width:85%;
-  font-family: "worcestersf", helvetica, arial, sans-serif;
-  font-weight: 700;
-}
-/* typo avant : font-family: "Source Sans Pro", helvetica, arial, sans-serif;*/
-
-h1 {
   color:black;
-  font-size: 400%;
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow:2px 2px 2px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+h6 {  /*TITLES white on black*/
+  font-family: "lydian", times;
+  margin:40px auto;
+  padding:0;
+  width:85%;
+  color:white;
+  font-size: 500%;
   text-transform: uppercase;
   text-shadow:2px 2px 2px rgba(0,0,0,0.6);
   text-align: center;
 }
 
 h2 {
+  font-family: "lydian", times;
+  margin:40px auto;
+  padding:0;
+  width:100%;
   color:black;
-  font-size: 200%;
+  font-size: 320%;
+  text-transform: uppercase;
+  text-shadow:2px 2px 2px rgba(0,0,0,0.6);
+  text-align: center;
 
 }
 
@@ -275,41 +426,136 @@ h3 {
 
 
 .marge {
-margin-left: 33em;
+margin-left: 35em;
 }
+
+
 
 
 .bg {
   display:block;
   position:absolute;
-  z-index:-1;}
+  z-index:-1;
+  }
+
+  
 
   article {
-  margin:110px 80px 15px 80px;
-  -webkit-columns:2 200px;
-  -moz-columns: 2 200px;
-  columns: 2 200px;
+    height: 480px;
+    column-fill: auto;
+  margin:-50px 65px 15px 65px;
+  column-fill: auto;
+  -webkit-columns:2 230px;
+  -moz-columns: 2 230px;
+  columns: 2 230px;
   -webkit-column-gap: 4em;
   -moz-column-gap: 4em;
   -column-gap: 4em;
   -webkit-column-rule: 2px outset #ddd;
   -moz-column-rule: 2px outset #ddd;
   column-rule: 2px outset #ddd;
-  /*background-color: red;*/
+  overflow-y: auto;
 }
-  footer {
-  margin-left: 260px;
-  width: 700px;
-  padding-bottom: 10px;
-  /*-webkit-columns:2 200px;
-  -moz-columns: 2 200px;
-  columns: 2 200px;
+
+ section {
+    height: 480px;
+    column-fill: auto;
+  margin:-50px 65px 15px 65px;
+  column-fill: auto;
+  -webkit-columns:2 230px;
+  -moz-columns: 2 230px;
+  columns: 2 230px;
   -webkit-column-gap: 4em;
   -moz-column-gap: 4em;
   -column-gap: 4em;
-  background-color: blue;*/
+  -webkit-column-rule: 2px outset #ddd;
+  -moz-column-rule: 2px outset #ddd;
+  column-rule: 2px outset #ddd;
+  }
+
+  header {
+    height: 1500px;
+    column-fill: auto;
+  margin:-10px 65px 15px 65px;
+  column-fill: auto;
+   -webkit-columns:3 150px;
+  -moz-columns: 3 150px;
+  columns: 43 150px;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  -column-gap: 4em;
+  -webkit-column-rule: 2px outset #ddd;
+  -moz-column-rule: 2px outset #ddd;
+  column-rule: 2px outset #ddd;
+  }
+
+
+nav {
+    font-family: "berkeley", times;
+    font-size: 17px;
+    height: 480px;
+    column-fill: auto;
+  margin:-50px 65px 10px 65px;
+  column-fill: auto;
+  -webkit-columns:4 50px;
+  -moz-columns: 4 50px;
+  columns: 4 50px;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  -column-gap: 4em;
+  -webkit-column-rule: 2px outset #ddd;
+  -moz-column-rule: 2px outset #ddd;
+  column-rule: 2px outset #ddd; 
+  
 }
 
+ 
+
+  footer {
+  margin-left: 300px;
+  width: 700px;
+  padding-bottom: 10px;
+  
+}
+
+  .subtitle {
+    margin-left:100px;
+    margin-top: 100px;
+    font-family: "lydian", times;
+    font-size:30px; 
+    color: white;
+    text-transform: uppercase;
+    
+
+  }
+
+   .subtitleb {
+    margin-left:100px;
+    margin-top: 80px;
+    font-family: "lydian", times;
+    font-size:30px; 
+    color: black;
+    text-transform: uppercase;
+    font-weight:normal;
+    
+
+  }
+
+
+.vignette {
+  width: 400px;
+  padding-left: 35px;
+}
+
+.vignette2 {
+  width: 300px;
+  padding-left: 100px;
+}
+
+.vignette3 {
+  width: 200px;
+  padding-left: 150px;
+}
 
 
 
@@ -333,43 +579,44 @@ var _0x3370=["\x24\x28\x61\x29\x2E\x54\x28\x62\x28\x29\x7B\x38\x3D\x30\x3B\x50\x
       <div class="summary">
         <span class="dropt" title="">SUMMARY<span style="width:410px;">
           <span class="sum">SUMMARY </span><br>
-          <a href="#intro">
-          Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . 2 <br></a>
-          Chapter 1: A bankable renewal  . . . . . . . . . . . . . . . . . . . . 6 <br>
-          Chapter 2: A great power of attraction   . . . . . . . . . . . . 10 <br>
-          Chapter 3: A rampart against critical thinking . . . . . 16 <br>
-          Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . 2<br>
-          Footnotes, sources, bibliography . . . . . . . . . . . . . . . . . . 15
-
-          
+          <a href="#intro"> Introduction&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;03
+          <br></a>
+          <a href="#ch1">Chap.I: A bankable renewal&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;09 </a><br>
+          <a href="#ch2">Chap.II: A great power of attraction&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;&nbsp;29 <br></a>
+          <a href="#ch3">Chap.III: A rampart against critical thinking&nbsp;.&nbsp;.&nbsp;56 <br></a>
+          <a href="#ccl">Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76<br></a>
+          <a href="#foot">Footnotes, Images References, Bibliography&nbsp;.&nbsp;.&nbsp;&nbsp;80</a></font>
         </span>
         </span>
       </div>
 
       <div class="wrapper">
-      <div class="curtain c1"><span class="overlay">
+      <div class="curtain c1"><img class="bg" src="images/flamescouv.jpg" alt=""><span class="overlay">
       </span><br>
             <div class="inner">
-           <h1>The Power of Fascination:<br>The Islamic State's propaganda aesthetic</h1>
+           <h6>The Power of Fascination:<br>The Islamic State's <br> propaganda aesthetic</h6>
            <!--<h2>Nina Couvert</h2><br>!-->
           </div>
       </div>
 
 
-    <div class="curtain c2">
+    <div class="curtain c2"><img class="bg" src="images/water.jpg" alt="">
       <span class="overlay"></span><br>
+          <div class="subtitle"><a name="intro">Introduction</a></div>
           <div class="inner">
-            <article>
-            <p><a name="intro">INTRODUCTION</a></br></br> The Islamic State is a relatively young terrorist organisation. Its creation started in 2006, when Al-Qaeda in Irak gathered with 5 other djihadist groups in order to create the Mujahideen Shura Council in Irak. The 29th of June 2014, a caliphate was proclaimed and Abu Bakr al-Baghdadi was naimed as its caliph. At the time of writing this essay, the group defies all competition as it is turning out to be the most violent and well-funded djihadist organization in history.
-            On August 2014, the IS uploaded a video to Youtube entitled "A Message to America" showing the beheading of American journalist James Foley. Following this savage execution, the islamist group has been releasing other videos in the same gender, attracting really fastly the attention of the whole world. Analysing more deeply the IS’ way of communicating, it appears that those brutal videos are actually just a small part of a much bigger communication strategy, consisting in designing films, magazines and games in order to promote the group’s identity. The IS is attracting fighters from all over the world by producing high quality visuals based on the plagiarism of Western cultural codes.</br></br>
-            The IS’ visuals are troubling in the way that they are displaying cruelty, but also because they aesthetically produce a mimetism of western productions. Those visuals act like evidences of the IS’ existence but have, at the same time, a sort of uncaninness that make them feel unreal. The thin boundary between fiction an reality in IS’ visuals participate in creating an intellectual uncertainity in western minds, leading to fear and fascination for a vocabulary of visuals that we know, and yet, have never seen before. </p>
-            <!--<img src="images/pool.jpg" name="pool" width="100%" />-->
-            </article>
+            <section>
+            <h4>The Islamic State is a relatively young terrorist organisation. Its creation started in 2006, when Al-Qaeda in Irak gathered with 5 other djihadist groups in order to create the Mujahideen Shura Council in Irak. The 29th of June 2014, a caliphate was proclaimed and Abu Bakr al-Baghdadi was naimed as its caliph. At the time of writing this essay, the group defies all competition as it is turning out to be the most violent and well-funded djihadist organization in history. On August 2014, the IS uploaded a video to Youtube entitled "A Message to America" showing the beheading of American journalist James Foley. Following this savage execution, the islamist group has been releasing other videos in the same gender, attracting really fastly the attention from the international community. Analysing more deeply the IS’ way of communicating, it appears that those brutal videos are actually just a small part of a much bigger communication strategy, consisting in designing films, magazines and games in order to promote the group’s identity. Thanks to an accurate knowledge of Western societies, the IS is attracting fighters from all over the world by producing high quality visuals based on the plagiarism of Western cultural codes. Thomas Hegghammer, director of terrorism research at the Norwegian Defence Research Establishment declared in an interview with journalist Joshua Holland: <br><br>
+              
+            <div class="cadrew">
+              «We’re probably talking about around 3,000 people from North America, Europe and Australia. In fact, there are more foreign fighters in Syria and Iraq today than the combined number in all previous conflicts combined. So it’s a really extraordinary situation».</div>
+            <br>
+            The thesis is going to investigate the means of the IS’ visual propaganda by following this research question:</h4>
+            </section>
             <footer>
-            <h3>2<span class="marge">3</span></h3>
+            <h5>03<span class="marge">04</span></h5>
             </footer>
           </div>
-    </div>
+          </div>
 
 
         <div class="curtain c3"><span class="overlay">
@@ -385,79 +632,866 @@ var _0x3370=["\x24\x28\x61\x29\x2E\x54\x28\x62\x28\x29\x7B\x38\x3D\x30\x3B\x50\x
 
 
 
-        <div class="curtain c4"><span class="overlay">
+
+        <!-- ************************* CHAPTER 1 ************************* -->
+
+
+
+        <div class="curtain c4"><img class="bg" src="images/date.jpg" alt=""><span class="overlay">
         </span><br>
           <div class="inner">
-            <h1>Chapter 1<br> A bankable renewal</h1>
-            <!--<h2>
-              <ul>
-                  <li>The Islamic State vs Al-Qaeda</li>
-                  <li>100% Image control</li>
-                  <li>A remarquable marketing strategy</li>
-              </ul></h2>!-->
-            <br>
+            <a name="ch1"><h6>Chapter I<br> A bankable renewal</h6></a>
           </div>
         </div>
 
 
 
-    <div class="curtain c5"><img class="bg" src="images/jeanlucgodard.jpg" alt=""><span class="overlay"></span><br>
-    </div>
+ <!-- ********************** PART 1 ************************* -->
 
 
-<div class="curtain c6"><span class="overlay"></span><br>
-  <div class="inner">
-    <article>
-            <p><a name="intro">THE ISLAMIC STATE VS AL QAEDA</a></br></br>The history of the IS is very close to 
-            Al-Qaeda’s one. Being at first one of its branches,the IS took progressively distance with its parent organization for finally cutting all ties with it. In February 2014, Al-Qaeda described the IS as being a brutal and intractable group. In terms of strategy, the two groups have very different ways of proceeding. In fact, recreating a caliphate as being a pure islamic state was also Osama Bin Laden’s greatest dream, but what Al-Qaeda was trying to build in years, the impatient IS wants to create in an instant. By proclaming the caliphate in June, the IS has been overshadowing Al-Qaeda and gathering a brand new jihadist generation who got spread out after the assassinate of Bin Laden and who were looking for a new spiritual home. Engaged in an ethnic cleansing, the IS has been developping a strategy consisting in first : «purifying» the islamic state and second : expanding to the rest of the world. Unlike its predecessor who had different targets at the same time, the IS wants to show that it is following a clear goal, with a well-thought strategy that nobody can stop. In fact, the division between Al-Qaeda and the IS can basically be compared to a conflict of generations : a dusty Al-Qaeda believing in a kind of «traditionnal» terrorism and a young and dynamic IS breaking every rules. This generation gap finds its best illustration in the way the two groups have been settling their communication strategy and mainly their visual propaganda. From the very first moments, islamist groups have been using visual propaganda in order to broadcast their convictions, to claim the ownership of an attack and above all, to get an international recognition. It is difficult to know when has been released the first islamist video, but what is sure is that its first main push happened with the 11th of September attacks in America. Bin Laden, has being Al-Qaeda’s leader at that time, released a few audio and rapidly video documents in which he claimed the paternity of the attacks. A video released on the 9th of November 2011 is considered as being the first Al-Qaeda’s video.   </p>
-            <!--<img src="images/pool.jpg" name="pool" width="100%" />-->
+      <div class="curtain c5"><span class="overlay"></span><br>
+          <div class="subtitleb"><a name="intro">THE ISLAMIC STATE VS AL QAEDA</a></div>
+          <div class="inner">
+            <article>
+            <p>The history of the IS is very close to Al-Qaeda’s one. Being at first one of its branches, the IS took progressively distance with its <span class="underline">parent</span> organization for finally cutting all ties with it 
+              <font face="lydian" size="4">(1)</font>. In fact, in February 2014, Al-Qaeda described the IS as being a brutal and intractable group. Therefore, in terms of strategy, the two groups have very different ways of proceeding: recreating a caliphate as being a pure islamic state was also Osama bin Laden’s greatest <span class="underline">dream</span>, but what Al-Qaeda was trying to build in years, the impatient IS wants to create in an instant. By proclaming the caliphate in June, the IS has been overshadowing Al-Qaeda and gathering a brand new jihadist generation who got spread out after the assassinate of Bin Laden and who were looking for a new spiritual home. <font face="lydian" size="4">(2)</font> Engaged in an ethnic cleansing, the IS has been developping a strategy consisting in first: «purifying» the islamic state and second: expanding to the rest of the world. Unlike its predecessor who had different targets at the same time, the IS wants to show that it is following a clear goal, with a well-thought strategy that nobody can stop. Indeed, the division between Al-Qaeda and the IS can basically be compared to a conflict of generations: a <span class="encadre">dusty</span> Al-Qaeda believing in a kind of «traditionnal» terrorism and a young dynamic IS breaking every rules. This generation gap finds its best illustration in the way the two groups have been settling their communication strategy and mainly their visual propaganda. 
+            From the very first moments, islamist groups have been using visual propaganda in order to broadcast their convictions, to claim the ownership of an attack and above all, to get an international recognition. It is difficult to know when has been released the first islamist video, but what is sure is that its first main push happened with the 11th of September attacks in America. Bin Laden, as being Al-Qaeda’s leader at that time, released a few audio and rapidly video documents in which he claimed the paternity of the attacks. <font size="2">A video released on the 9th of November 2011 is considered as being the first Al-Qaeda’s video.</font>
+
+            During about 9 minutes, the video is showing Bin Laden and a few of his «collegues» talking and laughing about the attacks. The quality of the video is pretty bad: shot in a square frame, the video displays on the bottom the date and time of the film in a 90’s style that was already a bit <span class="encadre">outdated</span> in 2001.<br><br>
+
+            <img class="vignette2" src="images/first_alq.jpg"><br><br>
+
+             The camera appears to be standing on a tripod and the only effects that are rythming the whole movie are a few zoom-in/zoom-out on the faces of the different protagonists. Putting this video out of its context (if possible), the film is not really different from a hand-made family movie that could be shot for any gathering event. It almost looks difficult to believe that those smiling men, quietly sitting on pillows, actually planned an attack that killed around 3000 persons. What can however catch consideration is the attention that has been put to attach english subtitles to the video; these<br><br>
+
+             <img class="vignette2" src="images/first_alq2.jpg"><br><br>
+
+              are the very beginnings of an internationalisation of the propaganda that the IS will later push to its extreme. Over the years, the «style» of Al-Qaeda’s videos has never really changed: most of the time they are being shot in a sort of minimalism, displaying one of the main leaders standing in front of a beige background, face to camera, making new declarations and threats. The IS’ videos are light years away from Al-Qaeda’s ones. It’s almost as if the IS looked at Al-Qaeda’s blured, dull <span class="encadre">camcorder sermons</span> of a decade ago and concluded that extremist Islam really needed a fresh and energetic renewal. If the first IS’ video is sort of following the tradition of men standing face to the camera and making declarations, the whole setting around it completely changed. The video starts with photoshoped images of fighters, the backgrounds are now different exterior scenes,<br><br>
+
+              <img class="vignette2" src="images/respond.jpg"><br><br>
+
+               the fighters pictures appear in a slow motion effect and type is <span class="encadre">hierarchised</span>, directly included in the video. Far from Al-Qaeda’s english subtitles, the whole video is set in English, from the fighters declarations to the pieces of text accompanying the images.<font face="lydian" size="4">(3)</font><br><br>
+
+              The evolution of style between the two groups is huge: unlike Al-Qaeda, the IS videos look like they are part of a much wider marketing strategy whose main target is the entire world. Every aspect of their visual propaganda seems to be controlled, with no space for amateuristic mistakes.</p>
             </article>
             <footer>
-            <h3>12<span class="marge">13</span></h3>
+            <h3>11<span class="marge">12</span></h3>
             </footer>
-   </div>
-</div>
-
-<div class="curtain c7"><img class="bg" src="images/lenin.jpg" alt=""><span class="overlay"></span><br>
-</div>
-
-<div class="curtain c8"><img class="bg" src="images/first.jpg" alt=""><span class="overlay"></span><br>
-</div>
+           </div>
+            </div>
 
 
-<div class="curtain c9"><span class="overlay"></span><br>
-  <div class="inner"><article>
-            <p>During about 9 minutes, the video is showing Bin Laden and a few of his «collegues» talking and laughing about the attacks. The quality of the video is pretty bad : shot in a square frame, the video displays on the bottom the date and time of the film in a 90’s style that was already a bit outdated in 2001. The camera appears to be standing on a tripod and the only effects that are rythming the whole movie are a few zoom-in/zoom-out on the faces of the different protagonists. Putting this video out of its context (if possible), the film is not really different from a hand-made family movie that could be shot for any gathering event. It almost looks difficult to believe that those smiling men, quietly sitting on pillows, actually planned an attack that killed around 3000 persons. What can however catch attention is the attention that has been put to attach english subtitles to the video; these are the very beginnings of an internationalisation of the propaganda that the IS will later push to its extreme. The next videos from Al-Qaeda have never really seen their style changing. Most of the time they are being shot in a sort of minimalism, displaying one of the main leaders standing in front of a beige background, face to camera, and making new declarations and threats.
-            The IS’ videos are light years away from Al-Qaeda’s ones. It’s almost as if the IS looked at Al-Qaeda’s blured, dull camcorder sermons of a decade ago and concluded that extremist Islam really needed a fresh and energetic renewal. If the first IS’ video is sort of following the tradition of men standing face to camera and making declarations, the whole setting around it completely changed. The video starts with photoshoped photos of fighters, the backgrounds are now different exterior scenes, the fighters pictures appear in a slow motion effect and type is hierarchised, directly included in the video. Far from Al-Qaeda’s english subtitles, the whole video is set in English, from the fighters declarations to the pieces of text accompanying the images. The evolution of style between the two groups is huge; unlike Al-Qaeda, the IS videos look like they are part of a much wider marketing strategy whose main target is the entire world. Every aspects of their visual propaganda seems to be controlled, with no space for amateuristic mistakes. </p>
-            <!--<img src="images/pool.jpg" name="pool" width="100%" />-->
+
+   <!-- ****************** PART 2 ********************* -->
+
+
+
+          <div class="curtain c6"><span class="overlay"></span><br>
+          <div class="subtitleb"><a name="intro">100% Image control</a></div>
+          <div class="inner">
+            <article>
+            <p>A clear way of seeing the importance of control that the IS is putting on its image is by analysing how the image of the leader is being used. The new caliph, Abu Bakr al-Baghdadi became in a very short period sort of the new Osama bin Laden of our time. But unlike Bin Laden who was present almost in <span class="underline">every</span> Al-Qaeda’s videos, Baghdadi is nowhere to be seen. Only <span class="underline">two pictures</span> and the video of the caliphat declaration can be found of him while he’s the first djihadist leader to control this amount of fighters. When Bin Laden was acting like a<br><br>
+
+             <span class="lydianmot">«pop-star» leader</span><br><br>
+
+
+            often talking alone in his videos, Baghdadi almost <span class="underline">doesn’t talk at all</span>, only a few audio messages appear to be from him <font face="lydian" size="4">(4)</font>. Baghdadi is cultivating his image of an
+
+            <br><br><font size="2">«invisible djihadist»</font><br><br>
+
+            with only his cruelty talking for him. This silence and absence participate in reinforcing the <span class="underline">myth</span> of his personnality. Actually, Abu Bakr al-Baghdadi is giving a great attention to the control of his image, being totally aware of the power of a communication strategy. The difference between the two leaders’ behaviours finds its best illustration in the visuals that are being produced:<br><br>
+            Al-Qaeda’s visuals were about<br>
+            <span class="lydianmot">declaring</span><br><br>
+            whereas IS’ visuals are about<br>
+            <span class="lydianmot">showing.</span><br><br>
+
+            The IS takes a great effort in producing striking images that have a value of testimony, giving an «inside glimpse» of how sanguinary can IS members be, putting the viewer into the «intimacy» of a tragic scene. Most of the IS’ execution pictures follow a <span class="underline">manichean</span> division in the way they are constructed: on one side the IS murderers, standing and using their guns, are creating strong dark vertical lines in the pictures.<br><br>
+
+            On the other side, the victims are very often lying on the ground in an horizontal position. It is interesting to notice that the way the IS is showing power by its images is actually quite simple, a basic opposition between power and prostration, one standing, one lying.<br><br>
+
+            However, a precise analysis of those images made by Tungstène (a software analysing mathematic structures of pictures) reveals that those images have been scrupulously edited. <font face="lydian" size="4">(5)</font> Many areas where dust and smoke are the most visible have been <span class="encadre">edited</span> several times. This could have happen for different purposes, the simpliest one would be that the members wanted to hide something from the pictures, but it is more probable that those transformations are intended to reveal more dead bodies previously hidden by the dust. On other pictures, the victims blood has been altered: the color has been <span class="encadre">saturated</span> and the shapes of the pools underneath the victim’s heads have been <span class="encadre">modified</span>, probably in order to make it visually more present.<font face="lydian" size="4">(6)</font> From a technical point of view, those manipulations are quite classic, even a bit rudimentary as it is basically about blurring and reproducing parts of a picture, everyone in the possession of a basic photo editing software would be able to obtain similar results.<br><br>
+
+            But speaking more generally, it is obvious that the decisions of making changes are all tending to increase the shocking elements. It is also noticeable that the IS’ images have a sort of <span class="encadre">evenness</span> in their graphical aspects, since all of them are in a rather good quality.<br><br>
+
+            This aspect denounces the possession of a technical <span class="underline">knowledge</span>, no matter how big or small. Most of all, it points out an awareness from the militants of what to increase in order to efficiently convey a message. The IS’ execution images are intented to be seen by the world so they have to make a clear point and to communicate with a language that everybody can understand. As a matter of fact, the IS’ visual propaganda aims at triggering fear. First, to the whole Muslim community who is being threatened of a cruel death if refusing to pay allegeance to the Islamic State. Then, to the rest of the world, automatically considered as unfaithfull. However, the IS faces a important problem: the possibility of growing and keeping alive a sanguinary reputation implies to <span class="underline">recruit</span> fighters from abroad. In order to swell its ranks, the group needs to attract probable fighters from all over the world and, most of all, to develop a language that can universally seduce people and mainly young men.<font face="lydian" size="4">(7)</font> The IS’ answer to that problem has been to develop a language modeled on westerns brands’ strategies and on products of mass culture:<br><br> <span class="lydianmot">blockbusters, games and magazines</span> among others.</p>
             </article>
             <footer>
-            <h3>18<span class="marge">19</span></h3>
+            <h3>15<span class="marge">16</span></h3>
             </footer>
-   </div>
-</div>
+           </div>
+            </div>
 
-<div class="curtain c10"><img class="bg" src="images/respond.jpg" alt=""><span class="overlay"></span><br>
-</div>
 
-<div class="curtain c11"><span class="overlay"></span><br>
-  <div class="inner"><article>
-            <p>100% IMAGE CONTROL <br><br>
-            A clear way of seeing the importance of control that the IS is putting on its image is by analysing how the image of the leader is being used. The new caliph, Abou Bakr al-Baghdadi became in a very short period sort of the new Osama Bin Laden of our time. But unlike Bin Laden who was present on almost every Al-Qaeda’s videos, Baghdadi is nowhere to be seen. Only two pictures and the video of the caliphat declaration can be found of him while he’s the first djihadist leader to control this amount of fighters.When Bin Laden was acting like a «pop-star» leader, often talking alone in his videos, Baghdadi almost doesn’t talk at all, only a few audio messages appear to be from him. Baghdadi is cultivating his image of an «invisible djihadist», with only his cruelty talking for him. This silence and absence participate to reinforce the myth of his personnality. Actually, Abou Bakr al-Baghdadi is giving a great attention to the control of his image, being totally aware of the power of a communicaton strategy. The difference of the two leaders’ behaviours finds its best illustration in the visuals that are being produced: Al-Qaeda’s visuals were about declaring whereas IS’ visuals are about showing.
-            The IS takes a great effort in producing striking images that have a value of testimony, giving an «inside glimpse» of how sanguinary can IS members be, putting the viewer into the «intimacy» of a tragic scene. Most of the IS’ execution pictures follow a manichean division in the way they are constructed: on one side the IS murderers, standing and using their guns, are creating strong dark vertical lines in the pictures. On the other side, the victims are very often lying on the ground in an horizontal position. It is interesting to notice that the way the IS is showing power by its images is actually quite simple, a basic opposition between power and prostration, one standing one lying. However, a precise analysis of those images made by Tungstène (a software analysing mathematic structures of pictures) reveals that those images have been scrupulously edited. </p>
-            <!--<img src="images/pool.jpg" name="pool" width="100%" />-->
+
+            <div class="curtain c7"><img class="bg" src="images/tintin.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+
+
+  <!-- ****************** PART 3 ********************* -->
+
+
+
+            <div class="curtain c8"><span class="overlay"></span><br>
+          <div class="subtitleb"><a name="intro">A remarkable marketing strategy</a></div>
+          <div class="inner">
+            <article>
+            <p>In May 2014, the IS established its own media branch called <br><br>
+
+              <img class="vignette3" src="images/alhayatlogo.jpg"><br><br>
+
+
+            whose main purpose is to distribute diverse materials in several languages. According to MEMRI (Middle East Media Research Institute), Al-Hayat<br><br>
+
+            <span class="citation">«is thought to be an initiative of Abu Talha Al Almani, a former German rapper also known as Deso Dogg, who left Europe to fight alongside the IS».<font face="lydian" size="4">(8)</font></span><br>
+
+            If proved as true, it is very probable that Al Almani implemented his knowledge of the western cultures into the development of the IS’ propaganda. In fact, the uncommon aspect of the group’s communication is that a big part of it aims at an audience culturally different. Thanks to the development of Al-Hayat, the IS can recruit more western people who can add to the IS’ database a precious knowledge about how to target more efficiently the western population. Furthermore, thanks to its media arm, the IS is able to create and transmit its own content.<br><br>
+
+            <img class="vignette2" src="images/content.jpg"><br><br>
+
+
+            The logo of Al-Hayat is featured on every media productions made by the organisation, attesting the paternity of the content but also adding a sort of institutionalism to what is being broadcasted. The logo, a 3D golden arabic inscription, is strangely close to the one of the Qatari TV channel Al Jazeera, famous for broadcasting Al-Qaeda’s videos in the past decades.<br><br>
+
+            <img class="vignette3" src="images/aljazeera.jpg"><br><br>
+
+
+            Appart from the movie <span class="underline">Flames of War</span> (analysed later in the Chapter II), Al-Hayat has been distributing smaller videos, subtitles for existing videos, articles, news reports but also magazines and video series. The variety of those productions is clearly reminiscent from commercial strategies. What comes instantly in mind as a comparison is the example of the release of a western blockbuster: quickly after reaching the theatres, all sorts of derivated products are being produced, from mugs to video games, and sold to hooked fans.<br><br>
+
+            <span class="citation">«The Potter films are global blockbusters, and Potter video games are spun off from the films. Lego developps Potter-themed-sets. Clothing companies sell Potter t-shirts, nightgowns, and pants. Candy manufacturers sell candy copies of snacks that appear in the film, including Bertie Bott’s Every Flavour Beans and Chocolate Frogs.»</span><br>
+            <span class="underline">Global Entertainment Media: Between Cultural Imperialism and Cultural Globalization</span>,Tanner Mirrlees.<br><br>
+
+
+             The IS is completely following this path by <span class="encadre">merchandising</span> its identity to attract potential combatants. Since the establishment of the Al-Hayat Media Center, the IS has been releasing a campaign circulating on Youtube called <span class="underline">«Mujatweets»</span>.
+            This campaign is mainly targeting young people from western countries and showing how apparently great is the life under the obedience of the Islamic State <font face="lydian" size="4">(9)</font>. One of its episode (most of them have been deleted from Youtube), is depicting an IS member visiting injured fighters in a hospital and offering them comforting and encouraging words. Another <span class="underline">«Mujatweets»</span> video shows smiling IS members handing out candy and ice cream to cheering children. The production of this video serie is also in itself playing with western cultural codes and their history since the premices of TV series started in the United States in the 20th century.<br><br>
+
+
+            However, those more politically correct messages transmitted in the <span class="underline">«Mujatweets»</span> give a paradoxal «normal» image of the IS fighters,<br><br>
+
+            <span class="lydianmot">suddendly acting<br> like any other human being.</span><br><br>
+            <img class="vignette3" src="images/begood.jpg"><br><br>
+
+
+            If brutality catches attention from the world, a kind behaviour can attract, giving the impression that behind the crimes a <span class="underline">noble</span> pursuit is being fulfilled. Furthermore, by showing a more ordinary behaviour, the group is also silently implying that everybody can become an IS’ fighter and, as soon as being part of it, can integrate a nice and fraternal community.<br><br>
+
+            Besides trying to captivate its audience with a supposed kindness, the IS is also creating some «goodies» that people can purchase or download. One of them is an online magazine called «Dabiq» <font face="lydian" size="4">(10)</font>, first published in July 2014, in different languages including English. The layout of the magazine could be the one of any western magazine: a <span class="encadre">graphic guideline</span> is being respected within the different issues and all the texts are set in the sans-serif typeface Futura which is, in the western world, one of the most used typefaces in the visual landscape.<br><br>
+
+            <img class="vignette2" src="images/games.jpg"><br><br>
+
+            Another product that can be added to this collection is a serie of HTML5 little games available on the web.<font face="lydian" size="4">(11)</font> If the design of those games stays quite basic and even a bit childish, their purpose is to play the war in the comfort of a living room. Thus, as seen from the start, the IS’ propaganda strategy made a giant step from Al-Qaeda’s one. Profiting from its recruits’ knowledge of western cultural codes, the group is developing a propaganda aesthetic that uses all of the tools of its digital era. Using Internet, social media, video games and movies among others, the IS is fascinating people from all over the world by giving an impression of an oversized movement, present everywhere, that turns fiction into reality. </p>
             </article>
             <footer>
-            <h3>22<span class="marge">23</span></h3>
+            <h3>23<span class="marge">24</span></h3>
             </footer>
-   </div>
-</div>
-
-<div class="curtain c12"><img class="bg" src="images/tintin.jpg" alt=""><span class="overlay"></span><br>
-</div>
+           </div>
+            </div>
 
 
+            
 
+
+            <div class="curtain c9"><img class="bg" src="images/futura.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+
+
+
+
+
+            <!-- ************************* CHAPTER 2 ************************* -->
+
+
+            <div class="curtain c10"><img class="bg" src="images/edit.jpg" alt="">
+              <span class="overlay"></span><br>
+               <div class="inner">
+                    <a name="ch2"><h6>Chapter II<br> A great power of attraction</h6></a>
+              </div>
+            </div>
+
+
+ <!-- ******************* PART 1 *********************** -->
+
+
+             
+
+            <div class="curtain c11"><img class="bg" src="images/transfo1.jpg" alt=""><span class="overlay"></span><br>
+            <div class="subtitle"><a name="intro">A high tech media war</a></div>
+            <div class="inner">
+            <header>
+            <h4>Films, series, magazines… The IS’ propaganda panoply is particularly wide, using all of the tools that are available in 2014: Internet as being its best ally. When, for instance, the Nazis were using flyers and radio emmissions in 1940, the IS is Tweeting, posting videos on Youtube and photos on Instagram.Thanks to Internet, the IS can independantly flood the world with its images and promote its actions without interruptions, constantly uploading new content. Since the summer 2014, the IS members became present on social media, creating their official pages on Facebook and Twitter where they can gather a great amount of followers from all over the world. Robert Hannigan, head of Britain’s surveillance agency, recently said that:<br><br>
+
+            <div class="rotate">«a new generation of freely available technology has helped groups like Islamic State (Isis) to hide from the security services».<font face="lydian" size="4">(12)</font></div><br><br><br><br>
+
+            In fact, the democratisation of technologies have considerably facilitated the IS’ terrible soaring. Numerous militants who left their countries (and mainly western countries) to join the IS are not only becoming fighters but also playing a very important role in the IS’ propaganda.<br><br>
+
+            Those militants use their social media accounts in order to post images showing a supposed good life as being an IS’ fighter. Several of those posts show activists coming to join the IS and actually recreating their western standards of living on the site.<font face="lydian" size="4">(13)</font> Joining the IS doesn’t necessarly mean to accomodate to really severe amenities but rather to obtain a comfortable standard of living, maybe even better than the one back home…<br><br>
+
+            Pictures of new houses and cars that got obtained after the expatriation in Irak are targetting a population struggling in its daily life, who can easily be seduced by the idea of improving its level of life. Other pictures showing pizzas, candys and bathing in a swimming pool are all apparent proofs of a better life welcoming those who would join the movement. If no informations can be found yet about the number of people designing the official IS propaganda, it is definitely possible than only a few people with laptops and an internet connexion could have done the job.As an IS suppoter said, interviewed by VICE news:<br><br>
+
+            <div class="nonrotate1">«There are a lot of people in Isis who are good at Adobe applications – InDesign, Photoshop, you name it. There are people who have had a professional career in graphic design, and [others] who are self-learnt.».</div><br><br>
+
+            Indeed, the development of technologies has been making everybody able to create simple images and to spread them around the world thanks to the social media. Steve Rose, reporter at The Guardian, exactly describes this effect:<br>
+            <br>
+            <div class="nonrotate2">«Ironically, the beneficiaries of this media democratisation are a medieval theocracy hell-bent on eradicating democracy from the face of the earth.» <font face="lydian" size="4">(14)</font></div><br><br>
+
+            The IS strongly beneficiates from this democratisation, given the fact that another part of its propaganda is actually made by militants who stayed in their home countries and actively show sympathy for the movement by regularly posting messages or hand-made propaganda images on the web. This activity on the web maintains the visibilty of the IS and gives a feeling of a worldspread’s community, being encouraged by each others’ posts in continuing the media battle. Once again, the visuals created by those «independants» participate in giving a more accurate internationalisation of the propaganda. An example among others is an image posted on Instagram and seemingly appreciated by a western viewership:<br><br>
+
+            <div class="rotate1">«You only die once» reads one image that attracted many likes on Instagram, «Why not make it martyrdom?».</div><br><br><br><br>
+
+
+            Looking at this image, it is quite difficult to distinct if the photo has actually been shot on the site or if the scene has been extracted from an action movie. This reutilisation of aesthetic codes from western action movies and video games is another string to the IS’ bow, participating in its power to fascinate audiences. The IS is digging into the commonplaces of western’s visual landscape and turn them into powerfull weapons; this strategy found its apotheosis in the release of movies. In June 2014, the first one of the gender was posted on Youtube. Entitled The Clanging Swords IV (confusingly, parts I, II, and III do not exist), the film consisted in edited scenes of battles, with sounds and effects such as slow-motion. The production had every features of an american blockbuster, except its lenght. This difference got quickly overcome in September 2014, when the IS released a 55-minutes English language film called <span class="underline">Flames of War</span>.</h4>
+            </header>
+            <footer>
+            <h3>33<span class="marge">34</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+            
+
+
+            <div class="curtain c12"><img class="bg" src="images/jeanlucgodard.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+    <!-- ***************** PART 2 ******************* -->
+
+
+            <div class="curtain c13"><img class="bg" src="images/transfo1.jpg" alt="">
+            <span class="overlay"></span><br>
+            <div class="subtitle"><a name="intro">The mimetism of blockbuster codes</a></div>
+            <div class="inner">
+            <article>
+            <h4>Released in September 2014, the purpose of <span class="underlinew">Flames of War</span> is to explain the IS’s seizure of the Syrian Army <font face="lydian" size="4">(15)</font>. The structure of the movie can basically be divided in three main parts. The first one (≈ 8 minutes) is a sort of introduction explaining, with archive images of American presidents and soldiers, the IS’ version of the war’s start. The second one (≈ 34 minutes), is more of an insight into the ground battles, showing explosions, battles, prayers and death. The last one (≈ 13 minutes) consists in the culmination of sanguinary and horror, with group executions and soldiers (apparently) digging their own graves. <br><br>What is striking from the very first minutes is the didactic purpose of the movie. Following the footsteps of IS’ communication strategy, the whole movie is accompanied with the english voice of a narrator or, in the case of an arabic one, english subtitles. At the beginning and the end, extracts from the Quran are being displayed, all translated in english while an arabic voice recites it. Following the rythm of the arabic voice, passages of the texts are being highlighted, allowing non-arabic speakers to make a relation between what they read and what they hear, and yet to feel closer to what is being said and, probably, to learn some parts of the text. <br><br>
+
+            <img class="vignette2" src="images/fow1.jpg"> 
+
+            <br><br>Another feature of the movie is the use of maps that are illustrating the talk. 
+            The first one appearing is basically showing the geographical situation of Irak and Sham (the region of Syria) whose names are displayed in a white sans-serif typeface accompagnied with the arabic translation in a light blue.
+            <br><br>
+
+            <img class="vignette2" src="images/fow2.jpg"><br><br>
+
+            A fire burning in the middle of the names makes clear that these are countries where battles occur. From a graphical point of view, this already shows a bit of a <br><br>knowledge; even simple, I doubt my mother would be able to do that. Another map is showing conflicts and two big arrows are describing the moves made by the fighters. This second map is using the same «graphic line» as the previous one and attests that a reflexion has been made about how to design and make things understandable. Appart from clearly explaining issues, <span class="underlinew">Flames of War</span> is also excelling in terms of using blockbusters effects. From bazooka fires to processions in the streets, the movie is rythmed by an alternation between live actions and slow motion effects that create an aura around these specific moments. The use of this effect is reminiscent of action films, where it is being used for dramatic effects such as the famous bullet-dodging effect, popularized by <span class="underlinew">The Matrix</span>. In opposition to the slow-motion, <span class="underlinew">Flames of War</span> also uses a lot of accumulation of action sequences that are fastly being displayed one after another. This results in dynamic sequences where the jihadists are turning into heros, being on all fronts and showing no mercy for their opponents.<br><br>
+            In the same way, transitions betweensequences are often being made by a burst of flames, going from the bottom to the top of the image and radically «setting the screen in fire». If the link between those transitions and the title of the movie is far from being subtle, the repetition of this effect at some key moments of the film still participates in putting the movie in the action gender.
+
+            <br><br><img class="vignette2" src="images/fow3.jpg"><br><br>
+
+            Finally, other details such as different camera angles, the raising of the volume for jihadist songs and the evenness of the light color in the sequences are all proofs that behind this movie, people with editing skills have been working and searching for the best effect. <br><br>
+
+            To sum up <span class="underlinew">Flames of War</span>, it is patent that the movie inherits its visual vocabulary from action movies and especially from American blockbusters. Despite some defects like a better structure of the «storyline» (the sequences are somewhat repeating themselves), the movie is visually slick and sophisticated.<br><br> Apart from its cruelty scenes, watching <span class="underlinew">Flames of War</span> is disturbing in the sense that it is turning murders scenes in sequences of a movie, making the borders between fiction and reality difficult to grasp. Even the way of designing the title is also very reminiscent of the western popular TV serie Game of Thrones. With a typeface fairly similar, the use of a line in the construction and a title set in three parts:<br><br>
+            Flames | of | war strangely sounds like Game | of | Thrones.</h4>
+            </article>
+            <footer>
+            <h5>39<span class="marge">40</span></h5>
+            </footer>
+            </div>
+            </div>
+
+
+
+           
+            <div class="curtain c14"><img class="bg" src="images/got.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+            <div class="curtain c15"><img class="bg" src="images/fowtitle.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+            <div class="curtain c16">
+            <span class="overlay"></span><br>
+            <div class="inner">
+              <h2><br>
+                  «The clash of swords<br>
+                  is the song of the defiant<br> 
+                  and the path of fighting<br>
+                  is the path of life<br>
+                  •<br>
+                  between an assault,<br>
+                  that exterminates the tyrants<br>
+                  and a silencer,<br>
+                  with a beautiful echo<br>
+                  •<br>
+                  My religion has been strenghthened<br>
+                  and the tyrants have been humiliated<br>
+                  so rise up, oh my people,<br>
+                  on the path of the brave.<br>
+                  •<br>
+                  For it’s either a life<br>
+                  which delights the guided,<br>
+                  or a death which enrages the enemies<br>
+                  so arise brother,<br>
+                  get up on the path of salvation<br>
+                  so we may march together,<br>
+                  resist the agressors»<br>
+                  •<br>
+                  Nasheed Saleel Al Sawarim<br>
+                  soundtrack of<br>
+                  The Clanging of Swords IV</h2>
+            <footer>
+            <h5>2<span class="marge">3</span></h5>
+            </footer>
+            </div>
+            </div>
+
+
+
+    <!-- **************** PART 3 ****************** -->
+
+
+              <div class="curtain c17"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">A thin border between fiction and reality</a></div>
+            <div class="inner">
+            <article>
+            <p>Throughout its numerous propaganda elements, the IS manages<br><br>
+
+            <span class="lydianmot">to fascinate</span> people who are being caught by the highly fictionnal aesthetic of its productions. The IS’ propaganda is aware of the flaws of western societies and gets nourrished by them: the promise of a better life as a reward is an aspect that has already been mentioned.<br><br>
+
+            However, another one is the apparent possibility to realise in<br><br>
+            <span class="lydianmot">reality</span> what is normally only 
+            <span class="lydianmot">possible in fiction.<br><br></span>
+
+            Indeed, a third movie posted on Youtube by the IS made a step further in getting this relationship between fiction and reality even thinner than before. This whole video is only made out of sequences from the famous video game <i>«Grand Theft Auto»</i>, showing police officers being gunned down and trucks being blown up.<font face="lydian" size="4">(16)</font>All of the sequences of the video are extracted from the video game, creating confusion for the viewer to define if what he sees is real or fictionnal.<br><br>
+            <span class="citation">«Your games which are producing from you, we do the same actions in the battlefields.»</span><br><br>
+            <img class="vignette" src="images/bd.jpg"><br>
+
+            The sound, a djihadist song, is the only element that was actually created by the IS. In the same way, an image has been circulating on the web, showing two militants associated with the game <i>«Call of Duty»</i>. Those elements, acting in the same way as <span class="underline">Flames of War</span>, are transposing the<br><br>
+
+            <span class="lydianmot">war into the fiction</span> and here, into the game, implying that the IS’ fight is not far from the realisation of a game in real life. If you enjoy playing <i>«Grand Theft Auto»</i>, you definitely can become an IS’ fighter. Moreover, with this video, the IS smartly pinpoints a major issue of the current digital era consisting in phenomena such as addiction to technologies and exclusion from the society. The social exclusion due to technologies have been one of the key roots of many contemporary urban problems. Affordable computers and Internet connexions have lead to the development of new social behaviours based on the reduction of direct human interactions: the screen has being a new buffer zone between individuals.<font face="lydian" size="4">(17)</font> The IS’ propaganda is precisely operating in this field by implementing fiction in its real battles and profiting of a western new «desease»: the addiction to Internet, computers, and video games. Apparently, joining the IS would permit to quit a digital life lived by procuration since participating in the ground battles seems to offer the possibility to <span class="underline">embody</span> one’s favorite film’s or video game’s character. Taking part in the IS’ battles resembles to give a new meaning to one’s life that had previously been lost with the use of technologies.<br><br>
+
+            It is interesting to notice that some reactions among the western countries have been to consider the whole IS events has a complot theory headed by the United States. One of the main arguments serving the theory is actually based on the quality of the IS’ visuals, some westerners can hardly believe that a community from the Middle East can possess this awareness of western codes, master technologies and use editing skills. Among other posts, the one of an American woman on her blog is a good illustration:<br>
+
+            <div class="cadre">«Like the editing software, the ISIS production team shows off their skills in Photoshop image editing software, which often requires an extended learning period, resources, and practice. Despite a few imperfections, the ISIS [former names of the IS] production department seems to know how to cut and slice out sections of images to produce the desired effect of disconnecting a head from the body».<font face="lydian" size="4">(18)</font></div><br><br>
+
+            <p>When the IS is «selling» his actions by using fiction, a part of the western world is actually asking for it, refusing to accept the possibility of a terrorist group being able to manipulate western societies. In reaction to the departure of some citizens to join the IS in Irak, the United States have been launching a «counter media attack» in the form of a Twitter page called ThinkAgainTurnAway, whose purpose is to avert people of the danger of joining the IS. <br><br>One of its post parodies the IS’ Grand Theft Auto video: «Grand Theft Innocence – don’t let Isis be your controller!» Predictably enough, the IS militants have parodied ThinkAgainTurnAway’s parodies: the media war between the West and the Middle East becoming a hall of mirrors. Ironically, the United States are fighting the IS propaganda by using the same tools (photo editing, social media, videos…) but suprinsingly, they are creating less strong images.</p>
+            </article>
+            <footer>
+            <h3>50<span class="marge">51</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+            
+            <div class="curtain c18"><img class="bg" src="images/pimp.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+
+<!-- ******************************* CHAPTER 3 ******************************* -->
+
+
+            <div class="curtain c19"><img class="bg" src="images/expanda.jpg" alt="">
+              <span class="overlay"></span><br>
+               <div class="inner">
+                    <a name="ch3"><h6>Chapter III<br>A rampart against critical thinking</h6></a>
+              </div>
+            </div>
+
+
+             <!-- **************** PART 1 ******************* -->
+
+             <div class="curtain c20"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Fascination and uncaninness</a></div>
+            <div class="inner">
+            <article>
+            <p>Through many of the examples that have been previoulsy mentioned, it is patent that the IS has been playing with visual codes that are part of western societies’ visual <span class"encadre">routine</span>. By precisely mimicking films and video games, the IS manages to push forward a fascination developped by western societies for action. By consciously editing its videos, the group turns what is supposed to be real into a fiction where massacres appear<br><br>
+
+            <span class="lydianmot"> larger than life.</span><br><br>
+
+            In fact, the appeal from the public for real stories translated in fictions has already been proving its worth: the use of the mention «based on a true story», sometimes displayed at the beginning of a film, is a catcher of attention for an audience used to a daily amount of violence. Watching Flames of War, for instance, places the viewer in a paradoxal situation since the horror is romanced without using actors: the viewer is confronted with watching men in their very desperate last moments. Following an argument raised by the American journalist Natasha Lennard <font face="lydian" size="4">(19)</font>:<br><br>
+
+            <div class="cadre">«The Islamic State’s videos belong to a tradition of gothic horror in that they are […] uncanny.»</div><br><br> 
+
+            <p>This concept of «The Uncanny» was developed by Sigmund Freud in 1919. Freud used it in order to describe an instance where something can be both familiar and alien at the same time, resulting in a feeling of <span class="encadre">uncomfortably strangeness</span>.<font face="lydian" size="4">(20)</font> This situation is quite close to what is happening with the IS’ propaganda aesthetic: the viewer already saw those sequences a hundred times before in action movies and yet, sees them for the very first time. Something that is normally being considered as being part of a (disputable) entertainment is turning into something worrying. Following this theory, the higher level of the uncanny feeling occurs when related to death and cadavers since there are not many others fields in which the human thoughts and sensations have so less changed since the primitive times. Daniel Heischman, Head of the Upper School at St. Albans School in Washington DC, describes in an essay, the contradictory reaction he experienced as watching on the TV the events of the 11th of September 2001 <font face="lydian" size="4">(21)</font>:<br><br>
+
+            <div class="cadre">«I could not imagine that such things were happening; it was all like a very bad dream. However, the events felt eerily familiar in some small way. As the World Trade Center Towers fell to the ground bellow, I felt as if I was watching something very primal and, in some way, not entirely foreign to the human psyche, something in some small way, I had encoutered before.»</div><br><br>
+
+            <p>The testimony of Daniel Heischman highlights two characteristics of the uncanninness that also occur with the IS’ visuals. First, the uncanny easily surprises every time the borders between imagination (fiction or here, dreams) and reality fade out. Indeed, in the realm of fiction, a lot of things don’t trigger the feeling of the uncanny as they would do in real life. Secondly, Daniel Heischman refers to a sort of unexplicable fascination when seeing a dreadful event, a behaviour also happening when watching the IS’ visuals.<br><br>
+
+            According to the Webster’s Dictionary, «fascination» can be compared to a form of witchcraft:<i> «The act of bewitching, or enchanting; the exercise of a powerful or irresistible influence on the affections or passions».</i> It is manifest that under the spell of fascination, people can do things without understanding their reasons and also probably believing messages they previously didn’t agree with. By triggering people’s primitive emotions, the IS garanties to its propaganda an attentive audience. Plato, in the book IV of <span class="underline">Republic</span>, already wrote about the inner fascination of the human nature for violence <font face="lydian" size="4">(22)</font>:<br><br>
+
+            <div class="cadre">«The story is that Leontius […] observed some dead bodies lying on the ground at the place of execution. He felt a desire to see them, and also a dread and abhorrence of them; for a time he struggled and covered his eyes, but at length the desire got the better of him; and forcing them open».</div><br><br>
+
+            <p>This story illustrates what the german philiosopher Emmanuel Kant calls the human «double nature», both pathological and intelligible at the same time <font face="lydian" size="4">(23)</font>. If a solution to this deep human struggle can’t be found, it is however possible that a better moral but also <span class"encadre">aesthetical education</span> could permit to stem the effectiveness of propaganda movements such as the IS’ one. Unfortunately, the western mass culture is pointing in another direction.</p>
+
+            <br><br><img class="vignette2" src="images/bd2.jpg"><br><br>
+
+
+            </article>
+            <footer>
+            <h3>58<span class="marge">59</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+
+            <div class="curtain c21"><img class="bg" src="images/hyde.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+
+              <!-- **************** PART 2 ********************** -->
+
+
+            <div class="curtain c22"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">The landscape of our visual culture</a></div>
+            <div class="inner">
+            <article>
+            <p>As confronting the IS’ propaganda with what has already been done in history, it appears that the motivations of the IS are not different from the ones of previous extremist groups. Since ancient civilisations, the manipulation of crowds has always been functionning throughout a conscious use of <span class="encadre">mass media</span>. The IS is operating in the same turf, playing with what Western societies have been defining as their mass culture. It is however remarkable that very few progess has been made in the capacity from a population<br><br> <span class="lydianmot">to analyse the codes by which it is being massively entertained.</span><br><br>
+
+            In fact, the western spoon-feeding mass culture is not asking reflexion from its audience, it keeps on harping the slightly same scenarios to a population hungry for entertainment without complexity. Many of those easy cultural products satisfy primitives emotions: a heroic behaviour from the main character, the use of a particular music at some key moments, a manichean division in the storyline…<br> None of those features leave a space for the viewer to create a personnal and more reflexive approach to its entertainment. In his book, <span class="underline">The Society of the Spectacle</span>, Guy Debord, french theorist and film-maker, describes the concept of «spectacle» as being the inverted image of society, in which relations between commodities have supplanted relations between people.<font face="lydian" size="4">(24)</font> Debord notes that quality of life is impoverished by a degradation of knowledge with the hindering of critical thought. According to him, the society of spectacle is not providing the entertainment that is previously researched since it doesn’t trigger any <span class"encadre">action of thinking</span>. In fact, the mass culture consciously draws a line between the passive contemplating (entertainment) and the active thinking (everything else than leasure).<br><br> An interesting comment has been made on that subject in the book entitled <span class="underline">The age of the dream palace</span>, where Jeffrey Richards (the author) analyses the mechanisms of entertainment. He highlights similarities between cinema and religion quoting Richard Winnington:<br><br>
+
+            <div class="cadre">«the film serves a political and social need as a narcotic, rivalling or even superseding the church in the valuable respect of providing the masses with an escape dream» <font face="lydian" size="4">(25)</font>.</div>
+
+            <p>Thus, Western modern societies seem to have replaced religion by other means of <span class="encadre">fascination</span> In the same way as religion has been accused to prevent population from the exercise of its critical thinking, mass entertainment is most likely another threat to reflexion. By implementing this<br><br> <span class="lydianmot">«spectacle»</span> into its aesthetic, the IS managed to developp an ultra modern propaganda whose codes sneak into the Western visual landscape, beneficiating from the power of fascination that the mass culture has being developping over decades. In this case, an important responsibility is laying in the hands of those who create and design this visual landscape. Steve Rose, reporter at <span class="underline">The Guardian</span> (previously mentionned) raises this argument consisting in the fact that:<br>
+
+            <div class="cadre">«western film-makers, among others, currently face a challenge as they only seem to provide more raw material for the IS’ image library.» <font face="lydian" size="4">(26)</font></div><br>
+
+            <p>Actually, a few directors have been reacting to the expansion of the IS’ visual language, pointing up their possible role in the development of such propagandas. American documentary maker Eugene Jarecki declared that:<br>
+
+            <div class="cadre">«Not only are we a pace-setter in production values, we are also a pace-setter in murderous, amoral, profoundly disturbing content the world over».</div>
+
+            <p>In the same vein, Joshua Oppenheimer, director of The Act of Killing, also urges the West to reflect upon its own position:<br><br>
+
+            <div class="cadre">«This speaks volumes about who we have become, about our society, about alienation, about our relationship to the media, to fantasy, and via both to our fellow human beings. We must ask ourselves what moral vacuum have we created in the west, here at home. What alienation are we creating from each other, from community, from human life?».<font face="lydian" size="4">(27)</font> </div><br><br>
+
+            <p>Even if the Western’s mass culture and entertainment industry can’t be seen as responsible for the development of religious extremist movements such as the Islamic State, it is however worrying to observe that they can be used as a<br><br>
+            <span class="lydianmot">tool to empower</span><br><br>
+
+             the propaganda of a group whose roots have nothing to do with secular democracies. Such phenomenon raise questions about the role and responsibility of professions who create and design this visual landscape.<br><br>
+
+            To what extent are professionals designing this visual landscape responsible for such phenomena?</p>
+            </article>
+            <footer>
+            <h3>64<span class="marge">65</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+            <div class="curtain c23"><img class="bg" src="images/jvt.jpg" alt="">
+              <span class="overlay"></span><br>
+            </div>
+
+
+          
+
+            <!-- ************** PART 3 *************** -->
+
+            <div class="curtain c24"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">An active involvement from the audience</a></div>
+            <div class="inner">
+            <article>
+            <p>Robert Stam, an American specialist in film history, resumes the struggle for film-makers in choosing between <span class="encadre">critical</span> thinking or <span class="encadre">passive</span> pleasure in his book <span class="underline">Reflexivity in Film and Literature: From Don Quixote to Jean-Luc Godard</span>. According to him, those professions are divided between<br><br>
+
+            <div class="cadre">«endorsing entertainment uncritically and serving unthinking accomplice to the film industry, or lamenting the delight mass audiences take in vulgar and alienated spectacle.»</div>
+
+            <p>It is remarkable that this two contrasting sentiments embody a problem that can certainly be applyed to every profession dealing with <br><br><span class="lydianmot">the use of visuals</span>. Indeed, as focusing on the practice of graphic design, a same distinction can be found with either accepting to produce more seductive products in order to serve commercial purposes, or being able to concentrate on a more theoretical and research based practice, probably not financially enough supported. A conversation between design critics Rick Poynor and Michael Rock highlights this problem: <font face="lydian" size="4">(28)</font><br><br>
+
+            <div class="cadre">«art can kid itself that it occupies a privileged zone of free thinking and critique within capitalism, design as we mostly practice it today understands itself as an integral service to an expression of capitalism.» </div><br>
+
+            <p>Following this quote, it is manifest that the <span class="encadre">capitalism</span> structureof the Western world is pressing designers and visual makers in producing visuals whose main prupose is to create a financial rentability. In her thesis entitled <span class="underline">Re-envisioning Graphic Design as a Dialogic Practice</span>, Marie-Noëlle Hébert describes the possibility of incorporating <span class="encadre">«disruption in design»</span>, whose purpose is to <br><br><span class="lydianmot">awake</span> a critical reflexion from the audience: <font face="lydian" size="4">(29)</font><br><br>
+
+            <div class="cadre">«Robert Stam analyzes a vast array of movies exemplifying how the disruption of cinematic conventions allows a film to enter in dialogue with the subjects treated and the film industry while still participating in telling a story in a beautiful and pleasurable way. He shows that the introduction of this critical discourse does not negate filmic pleasure or its role as entertainment, but embraces the discipline’s nature while exorcising its alienation through the addition of a supplementary dialogic function.»</div><br><br>
+
+            <p>According to Marie-Noëlle Hébert, using design in order to <span class="encadre">interrupt a linear transmission</span> and to introduce <span class="lydianmot">unexpected<br> elements</span> is susceptible to generate reflection both from the user in regards to what is represented, and from practitioners in regards to design’s basic functions and communicative capabilities. In the same idea,Jan van Toorn, a famous dutch graphic designer, has been developping the concept of a «dialogic design», aiming at a communicating in a critical manner <font face="lydian" size="4">(30)</font>.Jan van Toorn has been actively animating the debate about the social and cultural responsibility of graphic designers in the Netherlands. Throughout his work, he militates for a process where «both designers and recipients are co-authors of the message», teaching the receivers of its design to become «writerly readers».<font face="lydian" size="4">(31)</font> His work functions as <span class="lydianmot">visual enigmas</span>, gathering visuals that have, at first sight, nothing to do with each others.<br><br>
+
+            The viewer is triggered in trying to reconstruct the <span class="encadre">storyline</span> that has been build behind what he sees. By exercing its reflexion and getting involved in the visuals that are presented to him, the viewer <span class="lydianmot">deciphers the world in a new way</span>, looking behind the <span class="lydianmot">commonplaces</span> of its daily visual routine and building a better resistance to its visual surroundings. The work of Jan van Toorn is a model of how to get around visual manipulation by giving a better visual <span class="lydianmot">education</span> to populations.<br><br>
+
+            Thus, visual makers (film-makers, graphic designers, or others) experiment particularly complex situations since they are financially dependant from the capitalist structure of Western societies. The demand of profitability from the visual industry is <span class="encadre">dividing</span> designers behaviours between either satisfying a mass audience used to <span class="encadre">spoon-feeding entertainments</span>, either challenging perceptions and critical reflexions from the viewers. The IS, throughout its propaganda, has demonstrated its accurate awareness of flaws in Western societies by copying codes of mass entertainment but also by beneficiating from the struggle of a profession that can hardly change its current visual landscape. <br><br>
+            However, the possibility of developing a better critical involvement from the audience by producing more <span class="lydianmot">challenging</span> visuals is an opportunity that needs to be seized. Indeed, as a future professional graphic designer, I feel strongly commited to this process. In my previous works, I have already been having a certain intuition and interest for the research of «disruption» in graphic design, however without being able yet to precisely name this interest. Troughout the production of booklets and videos, I have been increasingly wondering about <span class="encadre">the power of evocation</span> that images and typography contain, and mostly about how a conscious use of those features can bring the viewer in questionning what he is observing.<br>
+            <span class="lydianmot">Interrupting a continuity,<br><br> building visual enigmas</span> that can only be understood by an <span class="lydianmot">active</span> and <span class="lydianmot">reflexive</span> audience, those are themes that are dear to me and that I wish to explore troughout the research of my Graduation Project.</span></p>
+            </article>
+            <footer>
+            <h3>68<span class="marge">69</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+            
+
+
+
+
+            
+
+
+
+
+
+
+
+<!-- ************************ CONCLUSION ************************ -->
+
+
+
+          <div class="curtain c35"><img class="bg" src="images/ccl.jpg" alt="">
+          <span class="overlay"></span><br>
+          <div class="subtitle"><a name="intro">Conclusion</a></div>
+          <div class="inner">
+            <article>
+            <a name="ccl"><h4>Throughout this analysis of the IS’ means of visual propaganda, it appeared that the organisation demonstrates a high level of technical skills but also knowledge of its target’s cultural codes. The IS’ visuals are troubling in the way that they are displaying cruelty, but also because they aesthetically produce a mimetism of western productions. Those visuals act like evidences of the IS’ existence but have, at the same time, a sort of uncaninness that make them feel unreal. The thin boundary between fiction an reality in IS’ visuals participate in creating an intellectual uncertainity in western minds, leading to fear and fascination for a vocabulary of visuals that we know, and yet, have never seen before. By broadering the viewing angle of those effects, it is manifest that the IS has been beneficiating from a deeper ongoing problem regarding the condition of the Western mass culture. The establishment of a spoon-feeding culture, based on the passivity of an audience who has been educated in being entertained by the satisfaction of primal emotions, can definitely be scolded for numbing a population’s critical thinking. This thesis first started from a personnal interest in understanding the capacity from a terrorist group in attracting a Western population to join its ranks. From the analysis of graphic tools and aesthetics, the investigation slowly moved to a reflexion upon my own culture and particularly upon my future role and positioning as a graphic designer in this visual landscape. During this research, I came across the concepts of «disruption» and «dialogism» in design which I intent to investigate in my Graduation Project. Those concepts have particularly attracted my attention through the possibility that they offer in triggering an active involvment from an audience, revealing processes of manipulation and creating dialogue with an audience that deserves a better visual education. •</h4></a>
+            </article>
+            <footer>
+            <h5>76<span class="marge">77</span></h5>
+            </footer>
+            </div>
+            </div>
+
+
+            <div class="curtain c36"><img class="bg" src="images/trumanbye.jpg" alt="">
+              <span class="overlay"></span><br>
+              <div class="inner">
+              <h6>Written and designed by<br>Nina Couvert</h6>
+            </div>
+            </div>
+
+
+
+<!-- ************************ FOOTNOTES / IMG REFERENCES / BIBLIOGRAPHY ************************ -->
+
+
+
+          <div class="curtain c37"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Footnotes</a></div>
+            <div class="inner">
+            <nav>
+              <a name="foot"><font face="lydian">1. Urban, T.</font></a> (2014).
+              <i>From Muhammad to ISIS: Iraq’s Full Story.</i> Blog: Waitbutwhy.<br><br>
+              <font face="lydian">2. Lister, T.</font> (2014).
+              <i>How ISIS is overshadowing al Qaeda.</i> Newspaper: CNN.<br><br>
+              <font face="lydian">3. Memrijttm.org </font>(2014).<br>
+              <i>New ISIS Media Company Addresses English, German And French-Speaking Westerners.</i> Website: Memrijttm.org.<br><br>
+              <font face="lydian">4. Ayad, C. </font>(2014).
+              <i>Abou Bakr Al-Baghdadi, le nouveau Ben Laden.</i> Newspaper: Le Monde.<br><br>
+              <font face="lydian">5. Exomakina.fr,</font> (2014).
+              <i>Photo-Interprétation avancée.</i> Website: Exomakina.fr.<br><br>
+              <font face="lydian">6. Berteloot, T.</font> (2014).<br>
+              <i>Irak : comment les djihadistes d’EIIL manipulent leurs photos.</i> 
+              Newspaper: Le Monde.<br><br>
+              <font face="lydian">7. Becker, O.</font> (2014).
+              <i>ISIS Has a Really Slick and Sophisticated Media Department.</i>
+              Newspaper: Vice News.<br><br>
+              <font face="lydian">8. Kingsley, P.</font> (2014).
+              <i>Who is behind Isis’s terrifying online propaganda operation?</i>
+              Newspaper: The Guardian.<br><br>
+              <font face="lydian">9. The ISIS study group,</font> (2014).
+              <i>Mujatweets Archives.</i> Website: isisstudygroup.com.<br><br>
+              <font face="lydian">10. ClarionProject.org,</font> (2014).
+              <i>The Islamic State’s Magazine.</i> Website: ClarionProject.org.
+              <br><br> 
+              <font face="lydian">11. Ent.siteintelgroup.com,</font> (2014).
+              <i>Jihadist Creates HTML5 Games Promoting IS.</i> 
+              Website: Ent.siteintelgroup.com.<br><br>
+              <font face="lydian">12. EQuinn, B.</font> (2014).
+              <i>GCHQ chief accuses US tech giants of becoming terrorists’ ‘networks of choice’.</i>
+              Newspaper: The Guardian.<br><br>
+              <font face="lydian">13. Speri, A.</font> (2014).
+              <i>ISIS Fighters and Their Friends Are Total Social Media Pros.</i>
+              Newspaper: Vice news.<br><br>
+              <font face="lydian">14. Rose, S.</font> (2014).
+              <i>The Isis propaganda war: a hi-tech media jihad.</i> The Guardian.<br><br>
+              <font face="lydian">15. Mauro, R.</font> (2014).
+              <i>ISIS Releases ‘Flames of War’ Feature Film to Intimidate West.</i>
+              Website: ClarionProject.org.<br><br>
+              <font face="lydian">16. Thornhill, T.</font> (2014).<br>
+              <i>Isis use top video game Grand Theft Auto 5 to recruit children and radicalise the vulnerable.</i>
+              Newspaper: The Daily Mail. <br><br>
+              <font face="lydian">17. Considine, A.</font> (2014).<br>
+              <i>All of Your Devices Are Bumming You Out.</i> Newspaper: Vice News.<br><br>
+              <font face="lydian">18. Suarez, B.</font> (2014).<br>
+              <i>Ten signs ISIS is a scripted psyop.</i> Blog: Sott.net.<br><br>
+              <br> 
+            </nav>
+            <footer>
+            <h3>80<span class="marge">81</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+            <div class="curtain c38"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Footnotes</a></div>
+            <div class="inner">
+            <nav>
+              <font face="lydian">19. Lennard, N.</font> (2014).<br>
+              <i>Why Are the Media So Impressed by the Quality of Islamic State Films?</i>
+              Newspaper: Vice News.<br><br>
+              <font face="lydian">20. Freud, S., McLintock, D. and Haughton, H.</font> (2003).<br>
+              <i>The uncanny.</i> New York: Penguin Books.<br><br>
+              <font face="lydian">21. Heischman, D.</font> (2014).<br>
+              <i>The Uncanniness of September 11th.</i> Journal of Religion and Health.<br><br>
+              <font face="lydian">22. Plato., and Shorey, P.</font> (1994).
+              <i>The republic.</i> Cambridge, Mass. [u.a.]: Harvard Univ. Press.<br><br><br><br>
+              <font face="lydian">23. Kant, I., Louden, R. and Kuehn, M.</font> (2006).<br>
+              <i>Anthropology from a pragmatic point of view.</i> Cambridge: Cambridge University Press.<br><br>
+              <font face="lydian">24. Debord, G.</font> (1992).<br>
+              <i>La Société du spectacle.</i> Paris: Gallimard.<br><br>
+              <font face="lydian">25. Richards, J.</font> (2010).<br>
+              <i>The age of the dream palace.</i> London: I.B. Tauris.<br><br>
+              <font face="lydian">26. Rose, S.</font> (2014).<br>
+              <i>The Isis propaganda war: a hi-tech media jihad.</i> Newspaper: The Guardian.<br><br>
+              <font face="lydian">27. Pham, A.</font> (2014).
+              <i>Exclusive Interview With Joshua Oppenheimer.</i> Website: nordiskfilmogtvfond.com.<br><br>
+              <font face="lydian">28.  Stam, R.</font> (1992).
+              <i>Reflexivity in film and literature.</i> New York: Columbia University Press.<br><br>
+              <font face="lydian">29. Rock M. & Poynor M.</font> (1992).
+              <i>What Is This Thing Called Design Criticism, 1&2 in Multiple Signatures: On Designers, Authors, Readers and Users.</i> Ed. Michael Rock.<br><br>
+              <font face="lydian">30. Hébert, M.</font> (2014).<br> 
+              <i>Re-envisioning Graphic Design as a Dialogic Practice.</i><br><br>
+              <font face="lydian">31. Toorn, J.</font> (2006). <br>
+              <i>Design’s delight.</i> nai010 publishers.<br><br>
+              <font face="lydian">32. Maxbruinsma.nl,</font> (2014).<br>
+              <i>Je ne cherche pas, je trouve.</i> Website: maxbruinsma.nl.<br><br>
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </nav>
+            <footer>
+            <h3>82<span class="marge">83</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+            <div class="curtain c39"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Image references</a></div>
+            <div class="inner">
+            <nav>
+              <font face="lydian">pp. 07-08.</font><br>
+              <i>Battleship</i> (2012). American science fiction war film directed by Peter Berg. 
+              <br><br>
+              <font face="lydian">pp. 09-10.</font><br>
+              Al-Qaeda's supposed first video. 
+              <br><br>
+              <font face="lydian">pp. 17-18.</font><br>
+              <i>Tintin: The Castafiore Emerald.</i> (1963). 
+              <br><br>
+              <font face="lydian">pp. 17-18.</font><br>
+              <i>Tintin: The Castafiore Emerald.</i> (1963). 
+              <br><br>
+              <font face="lydian">pp. 21-22.</font><br>
+              Al-Qaeda's supposed first video + <i>Good Bye Lenin</i> (2003).
+              German film directed by Wolfgang Becker. 
+              <br><br>
+              <font face="lydian">pp. 27-28.</font><br>
+              IKEA magazine + Dabiq magazine. 
+              <br><br>
+              <font face="lydian">pp. 29-30.</font><br>
+              IS' execution image after analyse by Thungstène. 
+              <br><br>
+              <font face="lydian">pp. 37-38.</font><br>
+              French film director Jean Luc Godard. 
+              <br><br>
+              <font face="lydian">pp. 56-57.</font><br>
+              <i>The Expendables 2</i> (2012). American action film directed by Simon West. 
+              <br><br>
+              <font face="lydian">pp. 62-63.</font><br>
+              <i>Dr. Jekyll and Mr. Hyde</i> (1941). American horror film directed by Victor Fleming. 
+              <br><br>
+              <font face="lydian">pp. 70-71.</font><br>
+              A spread from the book <i>Designer's delight</i> (2013) by Dutch Graphic Designer Jan van Toorn.
+              <br><br>
+              <font face="lydian">pp. 76-79.</font><br>
+              <i>The Truman Show</i> (1998). American comedy-drama film directed by Peter Weir.
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </nav>
+            <footer>
+            <h3>84<span class="marge">85</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+            <div class="curtain c39"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Bibliography</a></div>
+            <div class="inner">
+            <nav>
+            <span class="underline">Online Newspapers</span><br><br>
+
+            <font face="lydian">Becker, O.</font> (2014).<br>
+            <i>ISIS Has a Really Slick and Sophisticated Media Department.</i>
+            Vice News. https://news.vice.com/article/isis-has-a-really-slick-and-sophisticated-media-department<br><br>
+
+            <font face="lydian">Berteloot, T.</font> (2014).<br>
+            <i>Irak : comment les djihadistes d’EIIL manipulent leurs photos.Le Monde.</i>
+            http://www.lemonde.fr/proche-orient/article/2014/06/19/irak-comment-les-djihadistes-d-eiil-manipulent-leur-photos_4441615_3218.html<br><br>
+
+            <font face="lydian">Brereton, A.</font> (2014).<br>
+            <i>The line between conspiracy and scepticism is getting harder to draw.</i> The Guardian.
+            http://www.theguardian.com/<br>commentisfree/2014/oct/06/the-line-between-conspiracy-and-scepticism-is-getting-harder-to-draw-just-ask-naomi-wolf<br><br>
+
+            <font face="lydian">Christophe, A.</font> (2014).<br>
+            <i>Abou Bakr Al-Baghdadi, le nouveau Ben Laden.</i>
+            Le Monde. http://www.lemonde.<br>fr/proche-orient/article/<br>2014/05/29/abou-bakr-al-baghdadi-le-nouveau-ben-laden_4428636_3218.html<br><br>
+
+            <font face="lydian">Considine, A.</font> (2014).<br>
+            <i>All of Your Devices Are Bumming You Out.</i>
+            Vice News. http://motherboard.<br>vice.com/blog/multitasking-is-correlated-with-depression<br>
+
+            <font face="lydian">Hall, J.</font> (2014).<br> 
+            <i>Inside the ISIS gift shop: Online jihadist spring/summer collection 
+            of T-shirts, hoodies and baseball caps shocks internet.</i>
+            http://www.dailymail.<br>co.uk/news/article-2666854/Inside-ISIS-gift-shop-Online-jihadist-spring-summer-collection-shocks-internet.html<br><br>
+
+            <font face="lydian">Kingsley, P.</font> (2014).<br>
+            <i>Who is behind Isis’s terrifying online propaganda operation?</i>
+            The Guardian. http://www.<br>theguardian.com/world/2014/jun/23/who-behind-isis-propaganda-operation-iraq<br><br>
+
+            <font face="lydian">Le Monde, </font>(2014).<br>
+            <i>Clips, Facebook, Twitter... l’EI, une com’ moderne au service du djihad.</i> 
+            http://www.le<br>monde.fr/international/article/<br>2014/10/29/otages-clips-et-reseaux-sociaux-la-communication-de-l-ei-decryptee_4513823_3210.html <br><br>
+
+            <font face="lydian">Lennard, N.</font> (2014).<br>
+            <i>Why Are the Media So Impressed by the Quality of Islamic State Films?.</i> Vice News.
+            [online] https://news.vice.com/article/why-is-the-media-so-impressed-by-the-quality-of-islamic-state-films<br><br>
+
+            <font face="lydian">Lister, T.</font> (2014).<br>
+            <i>How ISIS is overshadowing al Qaeda.</i> CNN. 
+            [online] http://edition.cnn.com/2014/06/<br>30/world/meast/isis-overshadows-al-qaeda/<br>
+            </nav>
+            <footer>
+            <h3>86<span class="marge">87</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+
+
+            <div class="curtain c40"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Bibliography</a></div>
+            <div class="inner">
+            <nav>
+            <font face="lydian">Quinn, B.</font> (2014).<br>
+            <i>GCHQ chief accuses US tech giants of becoming terrorists’ ‘networks of choice’.</i> The Guardian.
+            http://www.<br>theguardian.com/uk-news/2014/nov/03/privacy-gchq-spying-robert-hannigan<br><br>
+
+            <font face="lydian">Rose, S.</font> (2014).<br>
+            <i>The Isis propaganda war: a hi-tech media jihad.</i>
+            The Guardian. http://www.the<br>guardian.com/world/2014/oct/<br>07/isis-media-machine-propaganda-war<br><br>
+
+            <font face="lydian">Sallon, H.</font> (2014).<br>
+            <i>L’Etat islamique en Irak et au Levant, l’avenir du djihadisme mondial.</i> Le Monde.
+            http://www.lemonde.fr/proche-orient/article/2014/01/08/les-ambitions-regionales-de-l-etat-islamique-en-irak-et-au-levant_4343862_3218.html<br><br>
+
+            <font face="lydian">Speri, A.</font> (2014).<br>
+            <i>ISIS Fighters and Their Friends Are Total Social Media Pros.</i> Vice News.
+            https://news.<br>vice.com/article/isis-fighters-and-their-friends-are-total-social-media-pros<br><br>
+
+            <font face="lydian">Thornhill, T.</font> (2014).<br>
+            <i>Isis use top video game Grand Theft Auto 5 to recruit children and radicalise the vulnerable.</i> The Daily Mail.
+             http://www.dailymail.co.uk/<br>news/article-2765414/Isis-use-video-game-Grand-Theft-Auto-5-recruit-children-radicalise-vulnerable.html<br><br>
+
+            <span class="underline">Books</span><br><br>
+
+            <font face="lydian">Debord, G.</font> (1992).<br>
+            <i>La Société du spectacle.</i><br> Paris: Gallimard.<br><br>
+
+            <font face="lydian">Freud, S., McLintock, D. and Haughton, H.</font> (2003).
+            <i>The uncanny.</i> New York: Penguin Books.<br><br>
+
+            <font face="lydian">Kant, I., Louden, R. and Kuehn, M.</font> (2006). 
+            <i>Anthropology from a pragmatic point of view.</i>
+            Cambridge: Cambridge University Press.<br><br>
+
+            <font face="lydian">Platon., and Leroux, G.</font> (2002).
+            <i>La république.</i> Paris: Flammarion.<br><br>
+
+            <font face="lydian">Richards, J.</font> (2010).<br> 
+            <i>The age of the dream palace.</i><br> London: I.B. Tauris.<br><br>
+
+            <font face="lydian">Rock, M.</font> (2013). 
+            <i>Multiple signatures.</i> New York: Rizzoli.<br><br>
+
+            <font face="lydian">Stam, R. </font> (1992). 
+            <i>Reflexivity in film and literature.</i>
+            New York: Columbia University Press.<br><br>
+
+            <font face="lydian">Toorn, J.</font> (2006).
+            <i>Design’s delight.</i> [Rotterdam, Netherlands]: 010.<br><br>
+
+            <span class="underline">Websites & Blogs</span><br><br>
+
+            <font face="lydian">Bruinsma, M.</font> (2014).
+            Maxbruinsma.nl. 
+            http://maxbruinsma.nl/index1.<br>html?vantoorn_EN.htm<br><br>
+            </nav>
+            <footer>
+            <h3>88<span class="marge">89</span></h3>
+            </footer>
+            </div>
+            </div>
+
+
+
+
+            <div class="curtain c41"><span class="overlay"></span><br>
+            <div class="subtitleb"><a name="intro">Bibliography</a></div>
+            <div class="inner">
+            <nav>
+            <font face="lydian">ClarionProject.org. </font>(2014). 
+            <i>The Islamic State’s (ISIS, ISIL).</i>
+            http://www.clarionproject.org<br>/news/islamic-state-isis-isil-propaganda-magazine-dabiq<br>
+            <i>ISIS Releases ‘Flames of War’ Feature Film to Intimidate West.</i>
+            http://www.<br>clarionproject.org/analysis/isis-releases-flames-war-feature-film-intimidate-west<br>
+            <i>ISIS: ‘Cool’ Image Winning Over Next Generation of Jihadis.</i>
+            http://www.<br>clarionproject.org/analysis/islamic-state-winning-over-next-generation-jihadis<br><br>
+
+            <font face="lydian">Duclos, S.</font> (2014). 
+            <i>They Are All Dead Already! ISIS Staging Beheading Video Releases For Effect | Conspiracy Theories.<i>
+            http://beforeitsnews.com/<br>conspiracy-theories/2014/<br>09/they-are-all-dead-already-isis-staging-beheading-video-releases-for-effect-2465012.html<br><br>
+
+            <font face="lydian">Exomakina.fr.</font> (2014). 
+            <i>Photo-Interprétation avancée.</i>
+            http://www.exomakina.fr/eXo_<br>maKina/Tungstene.html<br><br>
+
+            <font face="lydian">Heischman, D.</font> (2002).
+            <i>The Uncanniness of September 11th.</i>
+            http://link.springer.<br>com/article/10.1023/A%3A10<br>20280718684#page-1<br><br>
+
+            <font face="lydian">Martel, F.</font> (2014).
+            <i>ISIS Now Selling Jihad With Twitter Account Full of Adorable Kittens.</i>
+            Breitbart. http://www.<br>breitbart.com/national-security/2014/06/26/isis-now-selling-jihad-with-twitter-account-full-of-adorable-kittens/<br><br>
+
+            <font face="lydian">Memrijttm.org.</font> (2014).
+            <i>New ISIS Media Company Addresses English, German And French-Speaking Westerners.</i>
+             http://www.<br>memrijttm.org/new-isis-media-company-targets-english-german-and-french-speaking-westerners.html<br><br>
+
+            <font face="lydian">Pham, A.</font> (2014).
+            <i>Nordisk Film & TV Fond :: Exclusive Interview With Joshua Oppenheimer.</i>
+            http://www.<br>nordiskfilmogtvfond.com/index.<br>php/news/stories/exclusive-interview-joshua-oppenheimer/<br><br>
+
+            <font face="lydian">SiteIntelGroup.</font> (2014). 
+            <i>Jihadist Creates HTML5 Games Promoting IS.</i>
+            http://ent.<br>siteintelgroup.com/Software-and-Technical-Materials/<br>jihadist-creates-html5-games- promoting-is-revenge-for-operation-in-oued-ellil-tunisia.html<br><br>
+
+            <font face="lydian">SOTT.net.</font> (2014). 
+            <i>Ten signs ISIS is a scripted psyop.</i> http://www.sott.net/article/285<br>546-Ten-signs-ISIS-is-a-scripted-psyop
+            <br><br>
+
+            <font face="lydian">The ISIS Study Group.</font> (2014).
+            <i>Mujatweets Archives.</i>
+            http://isisstudygroup.com/?tag=mujatweets<br><br><br><br>
+            </nav>
+            <footer>
+            <h3>90<span class="marge">91</span></h3>
+            </footer>
+            </div>
+            </div>
 
 </body>
 </html>
